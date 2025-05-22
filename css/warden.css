@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #24c6dc, #514a9d);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.login-container, .dashboard {
+  background: rgba(0,0,0,0.7);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #000;
+  width: 90%;
+  max-width: 800px;
+  animation: zoomIn 0.5s ease-in;
+}
+
+input, button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+}
+
+button {
+  background-color: #ffd700;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #e0c200;
+}
+
+.hidden {
+  display: none;
+}
+
+#outpass-list {
+  margin-top: 20px;
+  background: #fff;
+  color: #000;
+  padding: 15px;
+  border-radius: 10px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.outpass-item {
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+}
+
+.outpass-item p {
+  margin: 5px 0;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url('https://source.unsplash.com/1600x900/?university,college') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}

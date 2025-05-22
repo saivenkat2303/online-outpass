@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Login - Online Outpass</title>
+  <link rel="stylesheet" href="css/student.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <script src="js/student.js" defer></script>
+</head>
+<body>
+  <div id="login-page" class="login-container">
+    <h2>Student Login</h2>
+    <input type="text" id="student-username" placeholder="Username">
+    <input type="password" id="student-password" placeholder="Password">
+    <button onclick="studentLogin()">Login</button>
+    <button onclick="resetOutpasses()">Reset Outpasses</button>
+    <p id="login-msg"></p>
+  </div>
+
+  <div id="dashboard" class="dashboard hidden">
+    <h2>Student Dashboard</h2>
+    <form id="outpass-form">
+      <input type="text" placeholder="Name" id="name" required>
+      <input type="text" placeholder="Roll Number" id="roll" required>
+      <input type="text" placeholder="Student Number" id="studentNo" required>
+      <input type="text" placeholder="Branch" id="branch" required>
+      <input type="text" placeholder="Year" id="year" required>
+      <input type="text" placeholder="College" id="college" required>
+      <input type="text" placeholder="Parent Phone Number" id="parent" required>
+      <input type="date" id="dateOut" required>
+      <input type="date" id="dateIn" required>
+      <input type="text" placeholder="Region/Reason" id="region" required>
+      <button type="submit">Submit Outpass Request</button>
+    </form>
+
+    <button onclick="logoutStudent()">Logout</button>
+
+    <h3>Previous Outpasses</h3>
+    <div id="previous-requests"></div>
+
+    <div id="outpass-list"></div>
+  </div>
+</body>
+</html>

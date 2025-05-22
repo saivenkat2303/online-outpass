@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  animation: fadeIn 1.5s ease;
+}
+
+.title {
+  font-size: 3rem;
+  color: #707922;
+  text-shadow: 2px 2px #333;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #2a32d7;
+  margin-bottom: 40px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.btn {
+  background: #a94a4a;
+  color: #f7f4f4;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.2s, background 0.3s;
+}
+
+.btn:hover {
+  background: #ffeb3b;
+  transform: scale(1.05);
+  color: #222;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  background: url('https://source.unsplash.com/1600x900/?university,college') no-repeat center center fixed;
+  background-size: cover;
+  color: #e64949;
+}

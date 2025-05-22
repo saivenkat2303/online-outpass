@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Security Login - Online Outpass</title>
+  <link rel="stylesheet" href="css/security.css">
+  <script src="js/security.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="security-login" class="login-container">
+    <h2>Security Login</h2>
+    <input type="text" id="sec-user" placeholder="User ID">
+    <input type="password" id="sec-pass" placeholder="Password">
+    <button onclick="securityLogin()">Login</button>
+    <button onclick="resetSecurity()">Reset</button>
+    <p id="sec-msg"></p>
+  </div>
+
+  <div id="security-dashboard" class="dashboard hidden">
+    <h2>Security Dashboard</h2>
+    <button onclick="logoutSecurity()">Logout</button>
+    <div id="security-records"></div>
+  </div>
+</body>
+</html>
