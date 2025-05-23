@@ -141,3 +141,14 @@ function generatePDF(index) {
   link.download = `Outpass_${d.roll}.pdf`;
   link.click();
 }
+fetch('http://localhost:5000/send-sms', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    to: '+918143161626', // Warden phone number
+    message: '🔔 New Outpass Request from student1. Please review it.'
+  })
+})
+.then(res => res.json())
+.then(data => console.log('SMS sent to Warden:', data))
+.catch(err => console.error('SMS error:', err));

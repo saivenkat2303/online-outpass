@@ -58,3 +58,16 @@ function resetOutpasses() {
   alert("Outpasses reset.");
   loadOutpasses();
 }
+const studentPhone = '+918143161626'; // Replace with student's phone
+
+fetch('http://localhost:5000/send-sms', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    to: studentPhone,
+    message: `✅ Your outpass has been ${status === 'approved' ? 'approved' : 'rejected'} by the warden.`
+  })
+})
+.then(res => res.json())
+.then(data => console.log('SMS sent to Student:', data))
+.catch(err => console.error('SMS error:', err));
