@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Security Panel</title>
+  <link rel="stylesheet" href="css/security.css" />
+</head>
+<body>
+  <div class="login-container" id="loginBox">
+    <h2>Security Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="loginSecurity()">Login</button>
+  </div>
+
+  <div class="dashboard" id="dashboard" style="display:none;">
+    <h2>Security Dashboard</h2>
+    <button onclick="logout()">Logout</button>
+    <input type="text" id="searchInput" onkeyup="searchOutpasses()" placeholder="Search...">
+    
+    <div id="approvedTable"></div>
+  </div>
+
+  <script src="js/security.js"></script>
+</body>
+</html>

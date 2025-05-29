@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Warden Dashboard</title>
+  <link rel="stylesheet" href="css/warden.css" />
+</head>
+<body>
+  <div class="login-container" id="loginBox">
+    <h2>Warden Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="loginWarden()">Login</button>
+  </div>
+
+  <div class="dashboard" id="dashboard" style="display:none;">
+    <h2>Warden Dashboard</h2>
+    <button onclick="logout()">Logout</button>
+    <button onclick="resetOutpasses()">Reset All</button>
+    <input type="text" id="searchInput" onkeyup="searchOutpasses()" placeholder="Search...">
+
+    <h3>Pending Outpasses</h3>
+    <div id="pendingTable"></div>
+
+    <h3>Approved Outpasses</h3>
+    <div id="approvedTable"></div>
+
+    <h3>Rejected Outpasses</h3>
+    <div id="rejectedTable"></div>
+  </div>
+
+  <script src="js/warden.js"></script>
+</body>
+</html>
