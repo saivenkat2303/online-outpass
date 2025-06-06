@@ -1,7 +1,7 @@
 function loginWarden() {
   const user = document.getElementById("username").value;
   const pass = document.getElementById("password").value;
-  if (user === "warden1" && pass === "warden123") {
+  if (user === "admin1" && pass === "admin123") {
     document.getElementById("loginBox").style.display = "none";
     document.getElementById("dashboard").style.display = "block";
     loadOutpasses();
@@ -23,6 +23,7 @@ function loadOutpasses() {
         <td>${item.roll}</td>
         <td>${item.dateOut}</td>
         <td>${item.dateIn}</td>
+        <td>${item.parentPhone}</td>
         <td>${item.reason}</td>
         ${item.status === "Pending" ? `
           <td>
@@ -53,6 +54,7 @@ function makeTable(title, rows) {
         <th>Roll</th>
         <th>Out</th>
         <th>In</th>
+        <th>parentPhone</th>
         <th>Reason</th>
         <th>Action</th>
       </tr>
