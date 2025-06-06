@@ -1,7 +1,7 @@
 function loginWarden() {
   const user = document.getElementById("username").value;
   const pass = document.getElementById("password").value;
-  if (user === "admin1" && pass === "admin123") {
+  if (user === "warden1" && pass === "warden123") {
     document.getElementById("loginBox").style.display = "none";
     document.getElementById("dashboard").style.display = "block";
     loadOutpasses();
